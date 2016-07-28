@@ -11,3 +11,7 @@ jupyter:
 
 ping-subnet:
 	seq 1 255 | parallel -j 64 "ping -c 1 -q -W 1 192.168.88.{} > /dev/null 2> /dev/null && echo {} || true"
+
+powersave:
+	sudo cpupower frequency-set -g powersave
+
