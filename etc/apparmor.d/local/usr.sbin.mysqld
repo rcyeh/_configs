@@ -1,0 +1,10 @@
+# Site-specific additions and overrides for usr.sbin.mysqld.
+# For more details, please see /etc/apparmor.d/local/README.
+
+# Allow read/ write to /tmp
+  /tmp/ r,
+  /tmp/* rw,
+  /mnt/sda2/** rw,
+  /mnt/sda3/** rw,
+
+

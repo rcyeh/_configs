@@ -1,0 +1,2 @@
+xterm*scrollKey: true
+xterm*scrollTtyOutput: false

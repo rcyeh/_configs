@@ -5,6 +5,7 @@ ogcitrix:
 
 redshift:
 	killall redshift 2> /dev/null ; redshift -l 40.71:-74.01 -t 6500:3700 > /dev/null &
+# killall redshift 2> /dev/null ; redshift -l 34.71:-118.01 -t 6500:3700 > /dev/null &
 
 jupyter:
 	jupyter notebook &
