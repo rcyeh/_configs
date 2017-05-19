@@ -27,3 +27,9 @@ powersave:
 ec2-twitter:
 	ssh -i .ssh/rcy_amazon_ec2_kp.pem ec2-user@ec2-54-86-177-73.compute-1.amazonaws.com
 
+streisand-start:
+	aws ec2 start-instances --instance-id i-047699cde036aaa45
+
+streisand-stop:
+	aws ec2 stop-instances --instance-id i-047699cde036aaa45
+
