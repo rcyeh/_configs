@@ -17,5 +17,5 @@ powersave:
 	sudo cpupower frequency-set -g powersave
 
 ec2-twitter:
-	ssh -i .ssh/rcy_amazon_ec2_kp.pem ec2-user@ec2-54-86-177-73.compute-1.amazonaws.com
+	ssh -i .ssh/rcy_amazon_ec2_kp.pem ec2-user@ec2-54-86-92-241.compute-1.amazonaws.com
 
