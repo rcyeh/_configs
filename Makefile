@@ -6,6 +6,8 @@ targets:
 	@echo "    ping-subnet"
 	@echo "    powersave"
 	@echo "    redshift"
+	@echo "    streisand-start / streisand-stop"
+	@echo "    sms"
 
 ogcitrix:
 	perl -i -p -e 's/CPMAllowed=On/CPMAllowed=Off/; s/VSLAllowed=On/VSLAllowed=Off/; s/DesiredHRES=1024/DesiredHRES=4294967295/; s/DesiredVRES=768/DesiredVRES=4294967295/; s/TWIMode=On/TWIMode=Off/;' ~/Downloads/launch.ica
@@ -25,7 +27,7 @@ powersave:
 	sudo cpupower frequency-set -g powersave
 
 ec2-twitter:
-	ssh -i .ssh/rcy_amazon_ec2_kp.pem ec2-user@ec2-54-86-177-73.compute-1.amazonaws.com
+	ssh -i .ssh/rcy_amazon_ec2_kp.pem ec2-user@ec2-54-86-92-241.compute-1.amazonaws.com
 
 streisand-start:
 	aws ec2 start-instances --instance-id i-047699cde036aaa45
@@ -33,3 +35,8 @@ streisand-start:
 streisand-stop:
 	aws ec2 stop-instances --instance-id i-047699cde036aaa45
 
+streisand-ssh:
+	ssh -i .ssh/streisand_rsa ubuntu@ec2-34-202-201-130.compute-1.amazonaws.com
+
+sms:
+	echo 'aws sns publish --topic-arn "arn:aws:sns:us-east-1:780170686194:rcyeh-sms" --message "blahblah"'
