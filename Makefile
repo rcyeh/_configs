@@ -31,16 +31,16 @@ ec2-twitter:
 	ssh -i .ssh/rcy_amazon_ec2_kp.pem ec2-user@ec2-54-86-92-241.compute-1.amazonaws.com
 
 rsync-get:
-	rsync -avub root@192.168.88.200::NetBackup/r /home/.
+	rsync -avub --exclude=".dbus" --exclude=".cache" --exclude=".config" --exclude="log" --exclude=".thumbnails" root@192.168.88.200::NetBackup/r /home/.
 
 rsync-put:
-	rsync -avub /home/r root@192.168.88.200::NetBackup/.
+	rsync -avub --exclude=".dbus" --exclude=".cache" --exclude=".config" --exclude="log" --exclude=".thumbnails" /home/r root@192.168.88.200::NetBackup/.
 
 rsync-get-delete:
-	rsync -avub --del root@192.168.88.200::NetBackup/r /home/.
+	rsync -avub --del --exclude=".dbus" --exclude=".cache" --exclude=".config" --exclude="log" --exclude=".thumbnails" root@192.168.88.200::NetBackup/r /home/.
 
 rsync-put-delete:
-	rsync -avub --del /home/r root@192.168.88.200::NetBackup/.
+	rsync -avub --del --exclude=".dbus" --exclude=".cache" --exclude=".config" --exclude="log" --exclude=".thumbnails" /home/r root@192.168.88.200::NetBackup/.
 
 streisand-start:
 	aws ec2 start-instances --instance-id i-047699cde036aaa45
