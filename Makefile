@@ -43,10 +43,10 @@ rsync-put-delete:
 	rsync -Cavub --del --exclude=".dbus" --exclude=".cache" --exclude=".config" --exclude="log" --exclude=".thumbnails" /home/r root@192.168.88.200::NetBackup/.
 
 streisand-start:
-	aws ec2 start-instances --instance-id i-047699cde036aaa45
+	aws ec2 start-instances --instance-id i-047699cde036aaa45 && date
 
 streisand-stop:
-	aws ec2 stop-instances --instance-id i-047699cde036aaa45
+	aws ec2 stop-instances --instance-id i-047699cde036aaa45 && date
 
 streisand-ssh:
 	ssh -i .ssh/streisand_rsa ubuntu@ec2-34-202-201-130.compute-1.amazonaws.com
