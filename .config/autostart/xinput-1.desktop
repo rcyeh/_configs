@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Palm Dimensions" 6, 6
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Synaptics Palm Dimensions
+Name=Touchpad Palm size
+Comment[en_US]=
+Comment=

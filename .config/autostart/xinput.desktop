@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Palm Detection" 1
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Synaptics Palm Detection
+Name=Touchpad palm detection
+Comment[en_US]=
+Comment=
